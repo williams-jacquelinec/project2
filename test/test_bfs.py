@@ -11,7 +11,14 @@ def test_bfs_traversal():
     that all nodes are being traversed (ie. returns 
     the right number of nodes, in the right order, etc.)
     """
-    pass
+    bfs_traversal = Graph('data/tiny_network.adjlist').bfs('Atul Butte', end=None)
+
+    with open('data/tiny_network.adjlist', 'r') as data_file:
+        lines = [l for l in data_file if not l.startswith('#')]
+
+    assert len(bfs_traversal) == len(lines)  #assuming each line is a node (and each node it is connected to)
+
+    
 
 def test_bfs():
     """
@@ -24,4 +31,12 @@ def test_bfs():
     Include an additional test for nodes that are not connected 
     which should return None. 
     """
-    pass
+    # test for nodes that are connected (and return the shortest path)
+    bfs_shortest_path = Graph('data/citation_network.adjlist').bfs('Atul Butte', end='Jill Hollenbach')
+    return bfs_shortest_path
+    assert len(bfs_shortest_path) == 3
+
+    # test for nodes that are not connected
+    bfs_path = Graph('data/citation_network.adjlist').bfs('34720789', end='34966387')
+    return bfs_path
+    assert bfs_path == None

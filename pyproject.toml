@@ -1,0 +1,18 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "project2"
+authors = [{name = "Jacqueline Williams", email = "jacqueline.williams@ucsf.edu"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+dependencies = ["networkx==2.5", "pytest>=3.0"]
+
+[project.urls]
+Home = "https://github.com/williams-jacquelinec/project1"
+
+[scripts]
+test = "pytest >=2.7.3"

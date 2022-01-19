@@ -1,3 +1,5 @@
+! [BuildStatus] (https://github.com/williams-jacquelinec/Project2/workflows/Project2/badge.svg?event=push)
+
 # Project 2
 Breadth-first search
 
@@ -15,7 +17,10 @@ The purpose of this assignment is to get you comfortable working with graph stru
 ## Software Development Assessment
 
 * Write unit tests (in the test_bfs.py file) for your breadth first search
-* Replace these instructions with a brief description of bfs in your forked repo
+
+* The breadth-first search (bfs) is an algorithm used to search a data tree structure. It starts a the tree root (start node) and visits all neighbors of that node, at that level, before moving on to the next depth level. A 'queue' is used to keep track of child nodes that have not yet been visited.
+* The time complexity of bfs is O(V+E)
+* BFS is able to find the shortest path between 2 nodes.
 	
 * Automate Testing with a [Github Actions](https://docs.github.com/en/actions)
 
